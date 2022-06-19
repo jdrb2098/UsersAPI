@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 
-const CardMovie = ({
+const CardUsers = ({
   user,
   getAllUsers,
   URL,
@@ -63,4 +63,4 @@ const CardMovie = ({
   );
 };
 
-export default CardMovie;
+export default CardUsers;

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
-import CardMovie from "./components/CardMovie";
+import CardUsers from "./components/CardUsers";
 import Form from "./components/Form";
 import { useForm } from "react-hook-form";
 
@@ -75,8 +75,8 @@ function App() {
         <div ref={myRef}>
           {isShowForm && (
             <Form
-              createMovie={createUser}
-              updateMovieById={updateUserById}
+              createUser={createUser}
+              updateUserById={updateUserById}
               objectUpdate={objectUpdate}
               handleSubmit={handleSubmit}
               reset={reset}
@@ -87,7 +87,7 @@ function App() {
       </div>
 
       {users?.map((user) => (
-        <CardMovie
+        <CardUsers
           executeScroll={executeScroll}
           key={user.id}
           user={user}

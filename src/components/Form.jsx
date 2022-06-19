@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
 const Form = ({
-  createMovie,
-  updateMovieById,
+  createUser,
+  updateUserById,
   objectUpdate,
   handleSubmit,
   reset,
@@ -18,10 +18,10 @@ const Form = ({
 
   const submit = (data) => {
     if (objectUpdate !== undefined) {
-      updateMovieById(objectUpdate.id, data);
+      updateUserById(objectUpdate.id, data);
       reset(defaultValuesForm);
     } else {
-      createMovie(data);
+      createUser(data);
     }
     reset(defaultValuesForm);
   };
@@ -50,19 +50,19 @@ const Form = ({
 
       <div className="Row">
         <label htmlFor="email">
-        <i class="fa-solid fa-envelope"></i>
+        <i className="fa-solid fa-envelope"></i>
         </label>
         <input style={{width: '100%'}} type="email" id="email" {...register("email")} />
       </div>
       <div className="Row">
         <label htmlFor="birthday">
-        <i class="fa-solid fa-cake-candles"></i>
+        <i className="fa-solid fa-cake-candles"></i>
         </label>
         <input style={{width: '100%'}} type="date" id="birthday" {...register("birthday")} />
       </div>
       <div className="Row">
         <label htmlFor="password">
-        <i class="fa-solid fa-lock"></i>
+        <i className="fa-solid fa-lock"></i>
         </label>
         <input style={{width: '100%'}} type="password" id="password" {...register("password")} />
       </div>
